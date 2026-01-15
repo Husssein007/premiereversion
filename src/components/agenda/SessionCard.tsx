@@ -68,66 +68,68 @@ const SessionCard = ({
         )}
 
         {(speakers && speakers.length > 0) || moderator ? (
-          <div className="flex flex-col lg:flex-row gap-8 mt-6 relative">
-            {/* Panélistes à gauche */}
-            {speakers && speakers.length > 0 && (
-              <div className="flex-1">
-                {/* Ouverture du Panel */}
-                {speakers.filter(s => s.isKeynote).length > 0 && (
-                  <div className="mb-6">
-                    <h4 className="text-base font-bold text-primary mb-4 small-caps tracking-wide">
-                      Ouverture du Panel
-                    </h4>
-                    <div className="grid grid-cols-1 gap-4">
-                      {speakers.filter(s => s.isKeynote).map((speaker, index) => (
-                        <SpeakerCard
-                          key={index}
-                          name={speaker.name}
-                          role={speaker.role}
-                        />
-                      ))}
+          <div className="mt-6">
+            <div className="flex flex-col lg:flex-row gap-8">
+              {/* Panélistes à gauche */}
+              {speakers && speakers.length > 0 && (
+                <div className="lg:flex-1 lg:pr-[300px]">
+                  {/* Ouverture du Panel */}
+                  {speakers.filter(s => s.isKeynote).length > 0 && (
+                    <div className="mb-6">
+                      <h4 className="text-base font-bold text-primary mb-4 small-caps tracking-wide">
+                        Ouverture du Panel
+                      </h4>
+                      <div className="grid grid-cols-1 gap-4">
+                        {speakers.filter(s => s.isKeynote).map((speaker, index) => (
+                          <SpeakerCard
+                            key={index}
+                            name={speaker.name}
+                            role={speaker.role}
+                          />
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                )}
-                
-                {/* Panélistes */}
-                {speakers.filter(s => !s.isKeynote).length > 0 && (
-                  <div>
-                    <h4 className="text-base font-bold text-primary mb-4 small-caps tracking-wide">
-                      Panélistes
-                    </h4>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      {speakers.filter(s => !s.isKeynote).map((speaker, index) => (
-                        <SpeakerCard
-                          key={index}
-                          name={speaker.name}
-                          role={speaker.role}
-                        />
-                      ))}
+                  )}
+                  
+                  {/* Panélistes */}
+                  {speakers.filter(s => !s.isKeynote).length > 0 && (
+                    <div>
+                      <h4 className="text-base font-bold text-primary mb-4 small-caps tracking-wide">
+                        Panélistes
+                      </h4>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        {speakers.filter(s => !s.isKeynote).map((speaker, index) => (
+                          <SpeakerCard
+                            key={index}
+                            name={speaker.name}
+                            role={speaker.role}
+                          />
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                )}
-              </div>
-            )}
+                  )}
+                </div>
+              )}
 
-            {/* Modérateur à l'extrême droite, centré verticalement */}
-            {moderator && (
-              <div className="lg:self-center flex-shrink-0 lg:absolute lg:right-0 lg:top-1/2 lg:-translate-y-1/2">
-                <div className="text-center">
-                  <h4 className="text-base font-bold text-secondary mb-4 small-caps tracking-wide">
-                    Modérateur
-                  </h4>
-                  <div className="bg-gradient-to-br from-secondary/5 to-primary/5 border-2 border-secondary/30 p-6 rounded-2xl shadow-md min-w-[250px]">
-                    <span className="text-lg font-bold text-secondary block">
-                      {moderator.name}
-                    </span>
-                    {moderator.role && (
-                      <p className="text-sm text-muted-foreground mt-2">{moderator.role}</p>
-                    )}
+              {/* Modérateur à l'extrême droite, fixé */}
+              {moderator && (
+                <div className="lg:fixed lg:right-8 lg:w-[280px] flex-shrink-0 self-start lg:self-auto">
+                  <div className="text-center">
+                    <h4 className="text-base font-bold text-secondary mb-4 small-caps tracking-wide">
+                      Modérateur
+                    </h4>
+                    <div className="bg-gradient-to-br from-secondary/5 to-primary/5 border-2 border-secondary/30 p-6 rounded-2xl shadow-md">
+                      <span className="text-lg font-bold text-secondary block">
+                        {moderator.name}
+                      </span>
+                      {moderator.role && (
+                        <p className="text-sm text-muted-foreground mt-2">{moderator.role}</p>
+                      )}
+                    </div>
                   </div>
                 </div>
-              </div>
-            )}
+              )}
+            </div>
           </div>
         ) : null}
       </div>
