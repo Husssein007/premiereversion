@@ -13,12 +13,12 @@ const Index = () => {
       <ConfidentialBanner />
       <HeroBanner />
       
-      <main className="container mx-auto px-4 py-8 md:py-12">
-        <div className="mb-8 md:mb-12">
+      <main className="container mx-auto px-4 py-10 md:py-16">
+        <div className="mb-10 md:mb-14">
           <DateTabs activeDate={activeDate} onDateChange={setActiveDate} />
         </div>
 
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto space-y-8">
           {activeDate === "day1" ? <Day1Agenda /> : <Day2Agenda />}
         </div>
       </main>
