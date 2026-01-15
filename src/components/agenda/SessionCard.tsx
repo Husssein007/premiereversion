@@ -46,7 +46,7 @@ const SessionCard = ({
       <div className="timeline-line" />
       <TimeBadge time={time} />
       <div className="flex-1 session-card">
-        <h3 className="text-lg font-bold text-foreground tracking-wide mb-3 small-caps">
+        <h3 className="text-lg font-bold text-foreground tracking-wide mb-3">
           {title}
         </h3>
 
@@ -59,7 +59,7 @@ const SessionCard = ({
 
         {keynote && (
           <div className="mb-4">
-            <h4 className="text-sm font-semibold text-primary mb-2 small-caps">
+            <h4 className="text-sm font-semibold text-primary mb-2">
               Keynote Speaker
             </h4>
             <SpeakerCard name={keynote.name} role={keynote.role} />
@@ -72,7 +72,7 @@ const SessionCard = ({
             {moderator && (
               <div className="flex justify-center">
                 <div className="text-center">
-                  <h4 className="text-sm font-semibold text-secondary mb-2 small-caps">
+                  <h4 className="text-sm font-semibold text-secondary mb-2">
                     Modérateur
                   </h4>
                   <div className="bg-white border border-border p-4 rounded-xl shadow-sm min-w-[200px]">
@@ -90,7 +90,7 @@ const SessionCard = ({
             {/* Panélistes à gauche */}
             {speakers && speakers.length > 0 && (
               <div>
-                <h4 className="text-sm font-semibold text-primary mb-3 small-caps">
+                <h4 className="text-sm font-semibold text-primary mb-3">
                   Panélistes
                 </h4>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
