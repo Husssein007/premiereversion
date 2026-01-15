@@ -80,33 +80,42 @@ const SessionCard = ({
           </div>
         )}
 
-        {speakers && speakers.length > 0 && (
-          <div className="mb-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-              {speakers.map((speaker, index) => (
-                <SpeakerCard
-                  key={index}
-                  name={speaker.name}
-                  role={speaker.role}
-                />
-              ))}
-            </div>
-          </div>
-        )}
+        {(speakers && speakers.length > 0) || moderator ? (
+          <div className="flex flex-col md:flex-row gap-4 items-start">
+            {speakers && speakers.length > 0 && (
+              <div className="flex-1">
+                <h4 className="text-sm font-semibold text-primary mb-2">
+                  Panélistes :
+                </h4>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  {speakers.map((speaker, index) => (
+                    <SpeakerCard
+                      key={index}
+                      name={speaker.name}
+                      role={speaker.role}
+                    />
+                  ))}
+                </div>
+              </div>
+            )}
 
-        {moderator && (
-          <div className="pt-3 border-t border-border">
-            <span className="inline-block bg-primary/10 text-primary text-xs font-semibold px-2 py-1 rounded mr-2">
-              Modérateur
-            </span>
-            <span className="text-sm font-medium text-foreground">
-              {moderator.name}
-              {moderator.role && (
-                <span className="text-muted-foreground"> — {moderator.role}</span>
-              )}
-            </span>
+            {moderator && (
+              <div className="md:ml-auto md:text-right">
+                <h4 className="text-sm font-semibold text-primary mb-2">
+                  Modérateur :
+                </h4>
+                <div className="bg-primary/10 p-3 rounded-lg">
+                  <span className="text-sm font-medium text-foreground">
+                    {moderator.name}
+                  </span>
+                  {moderator.role && (
+                    <p className="text-xs text-muted-foreground">{moderator.role}</p>
+                  )}
+                </div>
+              </div>
+            )}
           </div>
-        )}
+        ) : null}
       </div>
     </div>
   );
