@@ -16,7 +16,7 @@ const Day1Agenda = () => {
         speakers={[
           { name: "Amina Magouri", role: "Présidente de Salma Dialogue" },
           { name: "Adama Lam", role: "Président de la CNES" },
-          { name: "Katja Roeckel", role: "Cheffe de pays de la GIZ au Sénégal" },
+          { name: "Katja Roeckel", role: "Directrice Résidente de la GIZ au Sénégal" },
           { name: "Jonathan Nowak", role: "Représentant Résident de la KAS Sénégal" },
           { name: "Représentant", role: "Ambassade de la République fédérale d'Allemagne" },
           { name: "Représentant du gouvernement Tunisien", role: "Ministère de l'Industrie" },
