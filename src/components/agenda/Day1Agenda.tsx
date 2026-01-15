@@ -6,23 +6,22 @@ const Day1Agenda = () => {
       <SessionCard
         time="09:00"
         title="Discours d'ouverture"
-        description="Allocutions de bienvenue par les représentants des organisations partenaires et institutions officielles."
         speakers={[
           { name: "Amina Magouri", role: "Présidente de Salma Dialogue" },
           { name: "Adama Lam", role: "Président de la CNES" },
           { name: "Katja Roeckel", role: "Directrice Résidente de la GIZ au Sénégal" },
-          { name: "Jonathan Nowak", role: "Représentant de l'Ambassade d'Allemagne au Sénégal" },
+          { name: "Jonathan Nowak", role: "Représentant Résident de la KAS Sénégal" },
+          { name: "Représentant de l'Ambassade d'Allemagne au Sénégal", role: "" },
           { name: "Rachid Saidani", role: "Ambassadeur de Tunisie au Sénégal" },
-          { name: "Représentant du gouvernement Tunisien", role: "Ministère de l'Industrie" },
+          { name: "Fatma Thabet Chiboub", role: "Ministre de l'Industrie, de l'Énergie et des Mines de Tunisie (Tbc)" },
         ]}
       />
 
       <SessionCard
         time="09:35"
         title="Ouverture officielle & Présentation de la politique industrielle et commerciale du Sénégal"
-        description="Présentation des orientations stratégiques du Sénégal en matière de politique industrielle et commerciale, avec un focus sur les opportunités d'investissement et de partenariat."
         speakers={[
-          { name: "Dr. Serigne Gueye Diop", role: "Ministre de l'Industrie et du Commerce du Sénégal (TBC)" },
+          { name: "Dr. Serigne Gueye Diop", role: "Ministre de l'Industrie et du Commerce du Sénégal" },
         ]}
       />
 
@@ -34,22 +33,15 @@ const Day1Agenda = () => {
 
       <SessionCard
         time="10:15"
-        title="Session inaugurale : Cadres politiques incitants et coopération Sud-Sud & Triangulaire"
-        description="Cette session inaugurale explore les cadres politiques favorables à l'investissement et au développement industriel, en mettant l'accent sur le rôle de la coopération Sud-Sud et triangulaire dans l'accélération de la transformation économique du continent africain. Les discussions porteront sur les meilleures pratiques, les modèles de partenariat réussis et les mécanismes de facilitation des échanges entre pays du Sud."
-        axes={[
-          "Politiques industrielles incitatives et environnement des affaires",
-          "Mécanismes de financement innovants pour la coopération Sud-Sud",
-          "Transfert de technologies et renforcement des capacités",
-          "Rôle des institutions régionales et internationales",
-          "Harmonisation des cadres réglementaires",
-        ]}
+        title="Session inaugurale : Cadres politiques incitants et coopération Sud-Sud & Triangulaire : Moteurs de la transformation économique dans les pays émergents"
+        description="Cette session de haut niveau mettra en lumière la coopération institutionnelle et économique entre les régions du Sud, mettant l'accent sur l'industrialisation, la résilience économique et la création d'emplois durables."
         speakers={[
-          { name: "Fethi Sahlaoui", role: "Directeur Général des Industries Manufacturières, Ministère Tunisien de l'Industrie" },
-          { name: "Bakary Séga Bathily", role: "Directeur Général APIX Sénégal" },
-          { name: "Pamela Mbabazi", role: "Présidente exécutive, Autorité nationale de planification (Ouganda)" },
-          { name: "Alexander Knipperts", role: "Fédération des Industries Allemandes (BDI)" },
+          { name: "Fatma Thabet Chiboub", role: "Ministre de l'Industrie, de l'Énergie et des Mines de Tunisie (Tbc) : Pacte de compétitivité et vision Afrique", isKeynote: true },
+          { name: "Bakary Séga Bathily", role: "Directeur Général de l'Agence pour la Promotion de l'Investissement et des Grands Travaux du Sénégal, APIX" },
+          { name: "Pamela Mbabazi", role: "Présidente exécutive de l'Autorité nationale de planification de l'Ouganda" },
+          { name: "Alexander Knipperts", role: "Fédération des Industries Allemandes, BDI" },
         ]}
-        moderator={{ name: "Fatou Sagna Sow" }}
+        moderator={{ name: "Fatou Sagna Sow", role: "Conseiller technique du Ministre de l'Industrie et du Commerce du Sénégal" }}
       />
 
       <SessionCard
@@ -60,54 +52,17 @@ const Day1Agenda = () => {
 
       <SessionCard
         time="13:30"
-        title="Session 1 : Industrialisation durable"
-        description="Cette session examine les stratégies et les initiatives visant à promouvoir une industrialisation durable en Afrique. Les discussions porteront sur l'intégration des pratiques environnementales, sociales et de gouvernance (ESG) dans les processus industriels, ainsi que sur les opportunités offertes par l'économie verte et la transition énergétique."
-        axes={[
-          "Économie circulaire et gestion des ressources",
-          "Énergies renouvelables et efficacité énergétique dans l'industrie",
-          "Standards ESG et certification pour les entreprises africaines",
-          "Financement vert et investissements durables",
-          "Innovation technologique pour une production propre",
-        ]}
+        title="Session 1 : Industrialisation durable : Structurer des chaînes de valeur africaines pour une meilleure intégration globale"
+        description="Cette session examinera les stratégies de développement industriel à haute valeur ajoutée axées sur le secteur automobile et la mobilité durable, comme vecteurs de transformation économique, de transfert technologique et de création d'emplois qualifiés entre l'Allemagne et l'Afrique."
         speakers={[
-          { name: "Représentant", role: "Secteur de l'industrie verte" },
-          { name: "Expert ESG", role: "Institution financière internationale" },
-          { name: "Représentant", role: "Agence de développement durable" },
-          { name: "Chef d'entreprise", role: "Industrie manufacturière durable" },
+          { name: "Sabri Brahem", role: "Responsable RH pour la région Europe et Afrique, Groupe DRÄXLMAIER", isKeynote: true },
+          { name: "Akrem Saadaoui", role: "Directeur du Bureau pour l'Afrique du Nord, AAAM" },
+          { name: "Marius Ochel", role: "Directeur des partenariats avec les associations internationales pour l'Afrique et l'Inde, Association Allemande de l'Industrie Automobile, VdA" },
+          { name: "Allan Muhumuza", role: "Chef du Bureau de la mobilité au Secrétariat à la technologie et à l'innovation de l'Ouganda" },
+          { name: "Martin Birkner", role: "Chef de la division NSO Business Strategy, Région Afrique Subsaharienne, Volkswagen Afrique" },
+          { name: "Babacar Gueye", role: "Directeur Général de EMG Universal Auto" },
         ]}
-        moderator={{ name: "Modérateur à confirmer" }}
-      />
-
-      <SessionCard
-        time="15:00"
-        title="Pause-café"
-        isBreak
-      />
-
-      <SessionCard
-        time="15:30"
-        title="Session 2 : Innovation en agribusiness et biotech"
-        description="Cette session met en lumière les innovations transformatrices dans les secteurs de l'agribusiness et des biotechnologies en Afrique. Les échanges porteront sur les nouvelles technologies agricoles, la bioéconomie et les opportunités de création de valeur ajoutée dans les chaînes de valeur agricoles."
-        axes={[
-          "Technologies agricoles de précision et digitalisation",
-          "Biotechnologies et amélioration des cultures",
-          "Transformation agroalimentaire et création de valeur",
-          "Accès aux marchés et normes de qualité internationales",
-          "Financement de l'innovation agricole et incubation de startups",
-        ]}
-        speakers={[
-          { name: "Représentant", role: "Secteur agritech" },
-          { name: "Chercheur", role: "Institut de recherche biotechnologique" },
-          { name: "Entrepreneur", role: "Startup agribusiness" },
-          { name: "Représentant", role: "Organisation internationale agricole" },
-        ]}
-        moderator={{ name: "Modérateur à confirmer" }}
-      />
-
-      <SessionCard
-        time="17:00"
-        title="Clôture de la première journée"
-        description="Synthèse des discussions de la journée et perspectives pour la deuxième journée du forum."
+        moderator={{ name: "Tourad Aidara", role: "Directeur des Opérations, des appuis techniques et de la Promotion du SRE, Ministère de l'Industrie et du Commerce du Sénégal" }}
       />
     </div>
   );
