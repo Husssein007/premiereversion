@@ -68,7 +68,7 @@ const SessionCard = ({
         )}
 
         {(speakers && speakers.length > 0) || moderator ? (
-          <div className="flex flex-col lg:flex-row lg:items-center gap-8 mt-6">
+          <div className="flex flex-col lg:flex-row gap-8 mt-6">
             {/* Panélistes à gauche */}
             {speakers && speakers.length > 0 && (
               <div className="flex-1">
@@ -110,14 +110,14 @@ const SessionCard = ({
               </div>
             )}
 
-            {/* Modérateur à droite, centré verticalement au milieu */}
+            {/* Modérateur à l'extrême droite, centré verticalement */}
             {moderator && (
-              <div className="flex items-center justify-center lg:min-w-[280px]">
+              <div className="lg:self-center lg:ml-auto flex-shrink-0">
                 <div className="text-center">
                   <h4 className="text-base font-bold text-secondary mb-4 small-caps tracking-wide">
                     Modérateur
                   </h4>
-                  <div className="bg-gradient-to-br from-secondary/5 to-primary/5 border-2 border-secondary/30 p-6 rounded-2xl shadow-md">
+                  <div className="bg-gradient-to-br from-secondary/5 to-primary/5 border-2 border-secondary/30 p-6 rounded-2xl shadow-md min-w-[250px]">
                     <span className="text-lg font-bold text-secondary block">
                       {moderator.name}
                     </span>
