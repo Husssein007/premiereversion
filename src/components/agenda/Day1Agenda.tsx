@@ -4,12 +4,6 @@ const Day1Agenda = () => {
   return (
     <div className="space-y-6">
       <SessionCard
-        time="08:30"
-        title="Accueil & Enregistrement"
-        description="Accueil des participants et enregistrement à l'entrée du forum."
-      />
-
-      <SessionCard
         time="09:00"
         title="Discours d'ouverture"
         description="Allocutions de bienvenue par les représentants des organisations partenaires et institutions officielles."
