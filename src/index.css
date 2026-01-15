@@ -126,11 +126,11 @@
   }
 
   .speaker-card {
-    @apply flex items-center gap-3 p-4 rounded-xl bg-white shadow-md;
+    @apply flex items-center gap-3 p-3 rounded-xl bg-white shadow-sm border border-border;
   }
 
-  .speaker-avatar {
-    @apply w-12 h-12 rounded-full bg-muted flex items-center justify-center text-muted-foreground;
+  .speaker-avatar-square {
+    @apply w-10 h-10 rounded-lg bg-muted flex items-center justify-center text-muted-foreground;
   }
 
   .tab-active {
