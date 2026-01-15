@@ -67,14 +67,14 @@ const SessionCard = ({
         )}
 
         {(speakers && speakers.length > 0) || moderator ? (
-          <div className="flex flex-col md:flex-row gap-6">
+          <div className="flex flex-col lg:flex-row gap-8 mt-6">
             {/* Panélistes à gauche */}
             {speakers && speakers.length > 0 && (
               <div className="flex-1">
-                <h4 className="text-sm font-semibold text-primary mb-3">
+                <h4 className="text-base font-bold text-primary mb-4 uppercase tracking-wide">
                   Panélistes
                 </h4>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {speakers.map((speaker, index) => (
                     <SpeakerCard
                       key={index}
@@ -88,17 +88,17 @@ const SessionCard = ({
 
             {/* Modérateur à droite, centré verticalement */}
             {moderator && (
-              <div className="flex items-center justify-center md:justify-end md:min-w-[220px]">
-                <div className="text-center">
-                  <h4 className="text-sm font-semibold text-secondary mb-2">
+              <div className="flex items-center justify-center lg:justify-end lg:min-w-[280px]">
+                <div className="text-center w-full lg:w-auto">
+                  <h4 className="text-base font-bold text-secondary mb-4 uppercase tracking-wide">
                     Modérateur
                   </h4>
-                  <div className="bg-white border border-border p-4 rounded-xl shadow-sm min-w-[180px]">
-                    <span className="text-base font-bold text-primary">
+                  <div className="bg-gradient-to-br from-secondary/5 to-primary/5 border-2 border-secondary/30 p-6 rounded-2xl shadow-md">
+                    <span className="text-lg font-bold text-secondary block">
                       {moderator.name}
                     </span>
                     {moderator.role && (
-                      <p className="text-sm text-muted-foreground mt-1">{moderator.role}</p>
+                      <p className="text-sm text-muted-foreground mt-2">{moderator.role}</p>
                     )}
                   </div>
                 </div>
