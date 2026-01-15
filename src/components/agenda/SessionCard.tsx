@@ -69,10 +69,10 @@ const SessionCard = ({
 
         {(speakers && speakers.length > 0) || moderator ? (
           <div className="mt-6">
-            <div className="flex flex-col lg:flex-row gap-8">
+            <div className="flex flex-col lg:flex-row lg:items-start gap-8">
               {/* Panélistes à gauche */}
               {speakers && speakers.length > 0 && (
-                <div className="lg:flex-1 lg:pr-[300px]">
+                <div className="flex-1">
                   {/* Ouverture du Panel */}
                   {speakers.filter(s => s.isKeynote).length > 0 && (
                     <div className="mb-6">
@@ -111,9 +111,9 @@ const SessionCard = ({
                 </div>
               )}
 
-              {/* Modérateur à l'extrême droite, fixé */}
+              {/* Modérateur à l'extrême droite, aligné en haut */}
               {moderator && (
-                <div className="lg:fixed lg:right-8 lg:w-[280px] flex-shrink-0 self-start lg:self-auto">
+                <div className="flex-shrink-0 lg:w-[250px]">
                   <div className="text-center">
                     <h4 className="text-base font-bold text-secondary mb-4 small-caps tracking-wide">
                       Modérateur
