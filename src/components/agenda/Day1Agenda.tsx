@@ -64,6 +64,33 @@ const Day1Agenda = () => {
         ]}
         moderator={{ name: "Tourad Aidara", role: "Directeur des Opérations, des appuis techniques et de la Promotion du SRE, Ministère de l'Industrie et du Commerce du Sénégal" }}
       />
+
+      <SessionCard
+        time="15:00"
+        title="Pause-café"
+        isBreak
+      />
+
+      <SessionCard
+        time="15:30"
+        title="Session 2 : Innovation en Agribusiness et Biotech : Consolider la production locale pour la captation de la valeur ajoutée"
+        description="Cette session explorera les leviers de modernisation du secteur agricole et agro-industriel pour stimuler la productivité, créer de la richesse, renforcer la résilience climatique et accroître la valeur ajoutée des produits locaux."
+        speakers={[
+          { name: "Aïssatou Ndiaye", role: "Coordinatrice Générale du Programme National de Développement des Agropoles du Sénégal, (PNDAS)", isKeynote: true },
+          { name: "Kassim El Sahili", role: "Fondateur et Président du Conseil d'Administration de la Société IBS" },
+          { name: "Tidjane Dème", role: "General Partner du fonds d'investissement Partech Africa" },
+          { name: "Cosmas Mwikirize", role: "Directeur du Secrétariat Technologie et Innovation de l'Ouganda" },
+          { name: "Olfa Kelani", role: "PDG et Fondatrice de la Société Kyto-Prod" },
+          { name: "Yosra Tahri", role: "PDG de la société PHYTOPRO" },
+        ]}
+        moderator={{ name: "Youssef Trifa", role: "Professeur à l'Institut National Agronomique de Tunisie" }}
+      />
+
+      <SessionCard
+        time="17:00"
+        title="Clôture de la première journée"
+        isBreak
+      />
     </div>
   );
 };
