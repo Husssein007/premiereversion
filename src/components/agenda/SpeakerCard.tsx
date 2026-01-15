@@ -8,8 +8,8 @@ interface SpeakerCardProps {
 const SpeakerCard = ({ name, role }: SpeakerCardProps) => {
   return (
     <div className="speaker-card">
-      <div className="speaker-avatar">
-        <User className="w-6 h-6" />
+      <div className="speaker-avatar-square">
+        <User className="w-5 h-5" />
       </div>
       <div className="flex-1 min-w-0">
         <p className="font-semibold text-foreground text-sm">{name}</p>

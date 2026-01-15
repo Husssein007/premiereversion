@@ -67,33 +67,14 @@ const SessionCard = ({
         )}
 
         {(speakers && speakers.length > 0) || moderator ? (
-          <div className="flex flex-col gap-6">
-            {/* Modérateur centré et mis en valeur */}
-            {moderator && (
-              <div className="flex justify-center">
-                <div className="text-center">
-                  <h4 className="text-sm font-semibold text-secondary mb-2">
-                    Modérateur
-                  </h4>
-                  <div className="bg-white border border-border p-4 rounded-xl shadow-sm min-w-[200px]">
-                    <span className="text-base font-bold text-primary">
-                      {moderator.name}
-                    </span>
-                    {moderator.role && (
-                      <p className="text-sm text-muted-foreground mt-1">{moderator.role}</p>
-                    )}
-                  </div>
-                </div>
-              </div>
-            )}
-
+          <div className="flex flex-col md:flex-row gap-6">
             {/* Panélistes à gauche */}
             {speakers && speakers.length > 0 && (
-              <div>
+              <div className="flex-1">
                 <h4 className="text-sm font-semibold text-primary mb-3">
                   Panélistes
                 </h4>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {speakers.map((speaker, index) => (
                     <SpeakerCard
                       key={index}
@@ -101,6 +82,25 @@ const SessionCard = ({
                       role={speaker.role}
                     />
                   ))}
+                </div>
+              </div>
+            )}
+
+            {/* Modérateur à droite, centré verticalement */}
+            {moderator && (
+              <div className="flex items-center justify-center md:justify-end md:min-w-[220px]">
+                <div className="text-center">
+                  <h4 className="text-sm font-semibold text-secondary mb-2">
+                    Modérateur
+                  </h4>
+                  <div className="bg-white border border-border p-4 rounded-xl shadow-sm min-w-[180px]">
+                    <span className="text-base font-bold text-primary">
+                      {moderator.name}
+                    </span>
+                    {moderator.role && (
+                      <p className="text-sm text-muted-foreground mt-1">{moderator.role}</p>
+                    )}
+                  </div>
                 </div>
               </div>
             )}
