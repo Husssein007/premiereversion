@@ -100,7 +100,7 @@ const SessionCard = ({
             )}
 
             {moderator && (
-              <div className="md:ml-auto md:text-right">
+              <div className="md:ml-auto text-center">
                 <h4 className="text-sm font-semibold text-primary mb-2">
                   Modérateur :
                 </h4>
