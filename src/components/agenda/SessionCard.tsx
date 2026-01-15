@@ -56,20 +56,6 @@ const SessionCard = ({
           </p>
         )}
 
-        {axes && axes.length > 0 && (
-          <div className="mb-4">
-            <h4 className="text-sm font-semibold text-primary mb-2 small-caps">
-              Axes de discussion
-            </h4>
-            <ul className="list-disc list-inside space-y-1">
-              {axes.map((axis, index) => (
-                <li key={index} className="text-sm text-muted-foreground">
-                  {axis}
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
 
         {keynote && (
           <div className="mb-4">
