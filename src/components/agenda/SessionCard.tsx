@@ -46,7 +46,7 @@ const SessionCard = ({
       <div className="timeline-line" />
       <TimeBadge time={time} />
       <div className="flex-1 session-card">
-        <h3 className="text-lg font-bold text-foreground uppercase tracking-wide mb-3">
+        <h3 className="text-lg font-bold text-foreground tracking-wide mb-3 small-caps">
           {title}
         </h3>
 
@@ -58,8 +58,8 @@ const SessionCard = ({
 
         {axes && axes.length > 0 && (
           <div className="mb-4">
-            <h4 className="text-sm font-semibold text-primary mb-2">
-              Axes de discussion :
+            <h4 className="text-sm font-semibold text-primary mb-2 small-caps">
+              Axes de discussion
             </h4>
             <ul className="list-disc list-inside space-y-1">
               {axes.map((axis, index) => (
@@ -73,21 +73,41 @@ const SessionCard = ({
 
         {keynote && (
           <div className="mb-4">
-            <h4 className="text-sm font-semibold text-primary mb-2">
-              Keynote Speaker :
+            <h4 className="text-sm font-semibold text-primary mb-2 small-caps">
+              Keynote Speaker
             </h4>
             <SpeakerCard name={keynote.name} role={keynote.role} />
           </div>
         )}
 
         {(speakers && speakers.length > 0) || moderator ? (
-          <div className="flex flex-col md:flex-row gap-4 items-start">
+          <div className="flex flex-col gap-6">
+            {/* Modérateur centré et mis en valeur */}
+            {moderator && (
+              <div className="flex justify-center">
+                <div className="text-center">
+                  <h4 className="text-sm font-semibold text-secondary mb-2 small-caps">
+                    Modérateur
+                  </h4>
+                  <div className="bg-secondary/20 border-2 border-secondary p-4 rounded-xl shadow-md min-w-[200px]">
+                    <span className="text-base font-bold text-primary">
+                      {moderator.name}
+                    </span>
+                    {moderator.role && (
+                      <p className="text-sm text-muted-foreground mt-1">{moderator.role}</p>
+                    )}
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Panélistes à gauche */}
             {speakers && speakers.length > 0 && (
-              <div className="flex-1">
-                <h4 className="text-sm font-semibold text-primary mb-2">
-                  Panélistes :
+              <div>
+                <h4 className="text-sm font-semibold text-primary mb-3 small-caps">
+                  Panélistes
                 </h4>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
                   {speakers.map((speaker, index) => (
                     <SpeakerCard
                       key={index}
@@ -95,22 +115,6 @@ const SessionCard = ({
                       role={speaker.role}
                     />
                   ))}
-                </div>
-              </div>
-            )}
-
-            {moderator && (
-              <div className="md:ml-auto text-center">
-                <h4 className="text-sm font-semibold text-primary mb-2">
-                  Modérateur :
-                </h4>
-                <div className="bg-primary/10 p-3 rounded-lg">
-                  <span className="text-sm font-medium text-foreground">
-                    {moderator.name}
-                  </span>
-                  {moderator.role && (
-                    <p className="text-xs text-muted-foreground">{moderator.role}</p>
-                  )}
                 </div>
               </div>
             )}
