@@ -146,6 +146,6 @@
   }
 
   .timeline-line {
-    @apply absolute left-[22px] top-10 bottom-0 w-0.5 bg-session-border;
+    @apply absolute left-[22px] top-10 bottom-0 w-px bg-session-border;
   }
 }
