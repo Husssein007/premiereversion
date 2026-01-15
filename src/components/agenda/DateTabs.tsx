@@ -7,11 +7,11 @@ interface DateTabsProps {
 
 const DateTabs = ({ activeDate, onDateChange }: DateTabsProps) => {
   return (
-    <div className="flex flex-col sm:flex-row gap-2 sm:gap-0 w-full max-w-2xl mx-auto">
+    <div className="flex flex-col sm:flex-row gap-3 w-full max-w-2xl mx-auto">
       <button
         onClick={() => onDateChange("day1")}
         className={cn(
-          "flex-1 py-3 px-6 text-sm md:text-base font-semibold rounded-lg sm:rounded-r-none transition-all duration-200",
+          "flex-1 py-3 px-6 text-sm md:text-base font-semibold rounded-full transition-all duration-200 small-caps",
           activeDate === "day1" ? "tab-active shadow-md" : "tab-inactive"
         )}
       >
@@ -20,7 +20,7 @@ const DateTabs = ({ activeDate, onDateChange }: DateTabsProps) => {
       <button
         onClick={() => onDateChange("day2")}
         className={cn(
-          "flex-1 py-3 px-6 text-sm md:text-base font-semibold rounded-lg sm:rounded-l-none transition-all duration-200",
+          "flex-1 py-3 px-6 text-sm md:text-base font-semibold rounded-full transition-all duration-200 small-caps",
           activeDate === "day2" ? "tab-active shadow-md" : "tab-inactive"
         )}
       >
