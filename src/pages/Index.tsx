@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import html2pdf from "html2pdf.js";
+import html2canvas from "html2canvas";
 import { Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ConfidentialBanner from "@/components/agenda/ConfidentialBanner";
@@ -12,18 +12,19 @@ const Index = () => {
   const [activeDate, setActiveDate] = useState<"day1" | "day2">("day1");
   const contentRef = useRef<HTMLDivElement>(null);
 
-  const handleExportPDF = () => {
+  const handleExportImage = async () => {
     if (!contentRef.current) return;
 
-    const opt = {
-      margin: [10, 10, 10, 10],
-      filename: `Agenda_Salma_Dialogue_${activeDate === "day1" ? "Jour1" : "Jour2"}.pdf`,
-      image: { type: "jpeg", quality: 0.98 },
-      html2canvas: { scale: 2, useCORS: true },
-      jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
-    };
+    const canvas = await html2canvas(contentRef.current, {
+      scale: 2,
+      useCORS: true,
+      backgroundColor: "#ffffff",
+    });
 
-    html2pdf().set(opt).from(contentRef.current).save();
+    const link = document.createElement("a");
+    link.download = `Agenda_Salma_Dialogue_${activeDate === "day1" ? "Jour1" : "Jour2"}.png`;
+    link.href = canvas.toDataURL("image/png");
+    link.click();
   };
 
   return (
@@ -34,13 +35,13 @@ const Index = () => {
       <main className="container mx-auto px-4 py-10 md:py-16">
         <div className="flex justify-between items-center mb-10 md:mb-14">
           <DateTabs activeDate={activeDate} onDateChange={setActiveDate} />
-          <Button onClick={handleExportPDF} variant="outline" className="gap-2">
+          <Button onClick={handleExportImage} variant="outline" className="gap-2">
             <Download className="h-4 w-4" />
-            Télécharger PDF
+            Télécharger Image
           </Button>
         </div>
 
-        <div ref={contentRef} className="max-w-4xl mx-auto space-y-8">
+        <div ref={contentRef} className="max-w-4xl mx-auto space-y-8 bg-background p-4">
           {activeDate === "day1" ? <Day1Agenda /> : <Day2Agenda />}
         </div>
       </main>
