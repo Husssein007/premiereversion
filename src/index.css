@@ -115,13 +115,13 @@
 
 @layer components {
   .time-badge {
-    @apply inline-flex items-center justify-center px-3 py-1.5 rounded-md text-sm font-semibold;
+    @apply inline-flex items-center justify-center px-3 py-1.5 rounded-md text-sm font-semibold shadow-md;
     background-color: hsl(var(--time-badge));
     color: hsl(var(--primary-foreground));
   }
 
   .session-card {
-    @apply bg-card rounded-lg p-6 shadow-sm border;
+    @apply bg-card rounded-lg p-6 shadow-sm border mb-6;
     border-left: 4px solid hsl(var(--primary));
   }
 
@@ -134,11 +134,11 @@
   }
 
   .tab-active {
-    @apply bg-primary text-primary-foreground;
+    @apply bg-primary text-primary-foreground shadow-md;
   }
 
   .tab-inactive {
-    @apply bg-muted text-muted-foreground hover:bg-secondary;
+    @apply bg-white text-muted-foreground border border-border hover:bg-secondary/10 hover:text-secondary;
   }
 
   .confidential-badge {
