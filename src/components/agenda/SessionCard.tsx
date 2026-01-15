@@ -71,7 +71,7 @@ const SessionCard = ({
             {/* Panélistes à gauche */}
             {speakers && speakers.length > 0 && (
               <div className="flex-1">
-                <h4 className="text-base font-bold text-primary mb-4 uppercase tracking-wide">
+                <h4 className="text-base font-bold text-primary mb-4 small-caps tracking-wide">
                   Panélistes
                 </h4>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -90,7 +90,7 @@ const SessionCard = ({
             {moderator && (
               <div className="flex items-center justify-center lg:justify-end lg:min-w-[280px]">
                 <div className="text-center w-full lg:w-auto">
-                  <h4 className="text-base font-bold text-secondary mb-4 uppercase tracking-wide">
+                  <h4 className="text-base font-bold text-secondary mb-4 small-caps tracking-wide">
                     Modérateur
                   </h4>
                   <div className="bg-gradient-to-br from-secondary/5 to-primary/5 border-2 border-secondary/30 p-6 rounded-2xl shadow-md">
