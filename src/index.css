@@ -126,11 +126,11 @@
   }
 
   .speaker-card {
-    @apply flex items-center gap-5 p-5 rounded-2xl bg-white shadow-md border border-border transition-all duration-200 hover:shadow-lg hover:scale-[1.02];
+    @apply flex items-start gap-4 p-6 rounded-xl bg-white shadow-lg border-2 border-primary/20 transition-all duration-200 hover:shadow-xl hover:border-primary/40 min-h-[140px];
   }
 
   .speaker-avatar-square {
-    @apply w-16 h-16 rounded-xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center text-primary shadow-sm flex-shrink-0;
+    @apply w-14 h-14 rounded-lg bg-muted/50 border border-border flex items-center justify-center text-muted-foreground flex-shrink-0;
   }
 
   .tab-active {
