@@ -18,7 +18,7 @@ const Day1Agenda = () => {
           { name: "Adama Lam", role: "Président de la CNES" },
           { name: "Katja Roeckel", role: "Directrice Résidente de la GIZ au Sénégal" },
           { name: "Jonathan Nowak", role: "Représentant de l'Ambassade d'Allemagne au Sénégal" },
-          { name: "Rachid Saidani", role: "Ambassade de la République fédérale d'Allemagne" },
+          { name: "Rachid Saidani", role: "Ambassadeur de Tunisie au Sénégal" },
           { name: "Représentant du gouvernement Tunisien", role: "Ministère de l'Industrie" },
         ]}
       />
