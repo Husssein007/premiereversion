@@ -89,7 +89,7 @@ const SessionCard = ({
                   <h4 className="text-sm font-semibold text-secondary mb-2 small-caps">
                     Modérateur
                   </h4>
-                  <div className="bg-secondary/20 border-2 border-secondary p-4 rounded-xl shadow-md min-w-[200px]">
+                  <div className="bg-white border border-border p-4 rounded-xl shadow-sm min-w-[200px]">
                     <span className="text-base font-bold text-primary">
                       {moderator.name}
                     </span>
