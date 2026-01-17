@@ -76,7 +76,7 @@ const SessionCard = ({
                 <h4 className="text-base font-bold text-primary mb-4 small-caps tracking-wide">
                   Modérateur
                 </h4>
-                <div className="border border-primary/30 rounded-lg p-4 inline-flex items-start gap-4 bg-background">
+                <div className="border border-primary/30 rounded-lg p-4 flex items-start gap-4 bg-background max-w-2xl">
                   <div className="flex-shrink-0 w-12 h-12 border border-primary/30 rounded flex items-center justify-center bg-background">
                     <User className="w-6 h-6 text-primary/60" />
                   </div>
