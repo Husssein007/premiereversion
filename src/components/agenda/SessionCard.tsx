@@ -70,76 +70,74 @@ const SessionCard = ({
 
         {(speakers && speakers.length > 0) || moderator ? (
           <div className="mt-6">
-            <div className="flex flex-col lg:flex-row lg:items-start gap-8">
-              {/* Panélistes à gauche */}
-              {speakers && speakers.length > 0 && (
-                <div className="flex-1">
-                  {/* Ouverture du Panel */}
-                  {speakers.filter(s => s.isKeynote).length > 0 && (
-                    <div className="mb-6">
-                      <h4 className="text-base font-bold text-primary mb-4 small-caps tracking-wide">
-                        Ouverture du Panel
-                      </h4>
-                      <div className="grid grid-cols-1 gap-4">
-                        {speakers.filter(s => s.isKeynote).map((speaker, index) => (
-                          <SpeakerCard
-                            key={index}
-                            name={speaker.name}
-                            role={speaker.role}
-                          />
-                        ))}
-                      </div>
-                    </div>
-                  )}
-                  
-                  {/* Panélistes */}
-                  {speakers.filter(s => !s.isKeynote).length > 0 && (
-                    <div>
-                      <h4 className="text-base font-bold text-primary mb-4 small-caps tracking-wide">
-                        Panélistes
-                      </h4>
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        {speakers.filter(s => !s.isKeynote).map((speaker, index, arr) => (
-                          <div 
-                            key={index}
-                            className={arr.length % 2 !== 0 && index === arr.length - 1 ? "md:col-span-2 md:flex md:justify-center" : ""}
-                          >
-                            <div className={arr.length % 2 !== 0 && index === arr.length - 1 ? "md:w-1/2" : "w-full"}>
-                              <SpeakerCard
-                                name={speaker.name}
-                                role={speaker.role}
-                              />
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-                </div>
-              )}
-
-              {/* Modérateur à l'extrême droite, aligné en haut */}
-              {moderator && (
-                <div className="flex-shrink-0 lg:w-[280px]">
-                  <h4 className="text-base font-bold text-primary mb-4 small-caps tracking-wide">
-                    Modérateur
-                  </h4>
-                  <div className="flex items-start gap-3">
-                    <div className="flex-shrink-0 w-10 h-10 border border-primary/30 rounded flex items-center justify-center bg-background">
-                      <User className="w-5 h-5 text-primary/60" />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <p className="font-bold text-primary text-sm leading-tight mb-1 small-caps tracking-wide">
-                        {moderator.name}
-                      </p>
-                      {moderator.role && (
-                        <p className="text-sm text-muted-foreground leading-relaxed">{moderator.role}</p>
-                      )}
-                    </div>
+            {/* Modérateur en premier, centré avec bordure */}
+            {moderator && (
+              <div className="mb-8">
+                <h4 className="text-base font-bold text-primary mb-4 small-caps tracking-wide">
+                  Modérateur
+                </h4>
+                <div className="border border-primary/30 rounded-lg p-4 inline-flex items-start gap-4 bg-background">
+                  <div className="flex-shrink-0 w-12 h-12 border border-primary/30 rounded flex items-center justify-center bg-background">
+                    <User className="w-6 h-6 text-primary/60" />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <p className="font-bold text-primary text-sm leading-tight mb-1 small-caps tracking-wide">
+                      {moderator.name}
+                    </p>
+                    {moderator.role && (
+                      <p className="text-sm text-muted-foreground leading-relaxed">{moderator.role}</p>
+                    )}
                   </div>
                 </div>
-              )}
-            </div>
+              </div>
+            )}
+
+            {/* Panélistes */}
+            {speakers && speakers.length > 0 && (
+              <div>
+                {/* Ouverture du Panel */}
+                {speakers.filter(s => s.isKeynote).length > 0 && (
+                  <div className="mb-6">
+                    <h4 className="text-base font-bold text-primary mb-4 small-caps tracking-wide">
+                      Ouverture du Panel
+                    </h4>
+                    <div className="grid grid-cols-1 gap-4">
+                      {speakers.filter(s => s.isKeynote).map((speaker, index) => (
+                        <SpeakerCard
+                          key={index}
+                          name={speaker.name}
+                          role={speaker.role}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                )}
+                
+                {/* Panélistes */}
+                {speakers.filter(s => !s.isKeynote).length > 0 && (
+                  <div>
+                    <h4 className="text-base font-bold text-primary mb-4 small-caps tracking-wide">
+                      Panélistes
+                    </h4>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {speakers.filter(s => !s.isKeynote).map((speaker, index, arr) => (
+                        <div 
+                          key={index}
+                          className={arr.length % 2 !== 0 && index === arr.length - 1 ? "md:col-span-2 md:flex md:justify-center" : ""}
+                        >
+                          <div className={arr.length % 2 !== 0 && index === arr.length - 1 ? "md:w-1/2" : "w-full"}>
+                            <SpeakerCard
+                              name={speaker.name}
+                              role={speaker.role}
+                            />
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            )}
           </div>
         ) : null}
       </div>
