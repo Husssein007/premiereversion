@@ -10,8 +10,6 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <div className="text-center py-2 text-sm">Auto-deploy test ✅</div>
-      <ConfidentialBanner />
       <HeroBanner />
       
       <main className="container mx-auto px-4 py-12 md:py-20">
