@@ -59,14 +59,6 @@ const SessionCard = ({
         )}
 
 
-        {keynote && (
-          <div className="mb-4">
-            <h4 className="text-sm font-semibold text-primary mb-2">
-              Keynote Speaker
-            </h4>
-            <SpeakerCard name={keynote.name} role={keynote.role} />
-          </div>
-        )}
 
         {(speakers && speakers.length > 0) || moderator ? (
           <div className="mt-6">
