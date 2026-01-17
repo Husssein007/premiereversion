@@ -1,3 +1,4 @@
+import { User } from "lucide-react";
 import TimeBadge from "./TimeBadge";
 import SpeakerCard from "./SpeakerCard";
 
@@ -113,17 +114,20 @@ const SessionCard = ({
 
               {/* Modérateur à l'extrême droite, aligné en haut */}
               {moderator && (
-                <div className="flex-shrink-0 lg:w-[250px]">
-                  <div className="text-center">
-                    <h4 className="text-base font-bold text-secondary mb-4 small-caps tracking-wide">
-                      Modérateur
-                    </h4>
-                    <div className="bg-gradient-to-br from-secondary/5 to-primary/5 border-2 border-secondary/30 p-6 rounded-2xl shadow-md">
-                      <span className="text-lg font-bold text-secondary block">
+                <div className="flex-shrink-0 lg:w-[280px]">
+                  <h4 className="text-base font-bold text-primary mb-4 small-caps tracking-wide">
+                    Modérateur
+                  </h4>
+                  <div className="flex items-start gap-3">
+                    <div className="flex-shrink-0 w-10 h-10 border border-primary/30 rounded flex items-center justify-center bg-background">
+                      <User className="w-5 h-5 text-primary/60" />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <p className="font-bold text-primary text-sm leading-tight mb-1 uppercase tracking-wide">
                         {moderator.name}
-                      </span>
+                      </p>
                       {moderator.role && (
-                        <p className="text-sm text-muted-foreground mt-2">{moderator.role}</p>
+                        <p className="text-sm text-muted-foreground leading-relaxed">{moderator.role}</p>
                       )}
                     </div>
                   </div>
