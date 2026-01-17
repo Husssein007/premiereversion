@@ -7,13 +7,13 @@ interface SpeakerCardProps {
 
 const SpeakerCard = ({ name, role }: SpeakerCardProps) => {
   return (
-    <div className="flex items-start gap-3 py-2">
-      <div className="flex-shrink-0 w-10 h-10 border border-primary/30 rounded flex items-center justify-center bg-background">
-        <User className="w-5 h-5 text-primary/60" />
+    <div className="flex items-start gap-4 py-3">
+      <div className="flex-shrink-0 w-12 h-12 border border-[#b8d4e8] rounded-md flex items-center justify-center bg-white">
+        <User className="w-6 h-6 text-primary/50" />
       </div>
-      <div className="flex-1 min-w-0">
-        <p className="font-bold text-primary text-sm leading-tight mb-1 small-caps tracking-wide">{name}</p>
-        <p className="text-sm text-muted-foreground leading-relaxed">{role}</p>
+      <div className="flex-1 min-w-0 pt-0.5">
+        <p className="font-bold text-primary text-[15px] leading-snug mb-1.5 small-caps tracking-wide">{name}</p>
+        <p className="text-[13px] text-muted-foreground leading-relaxed">{role}</p>
       </div>
     </div>
   );
