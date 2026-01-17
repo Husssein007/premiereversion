@@ -7,7 +7,7 @@ interface SpeakerCardProps {
 
 const SpeakerCard = ({ name, role }: SpeakerCardProps) => {
   return (
-    <div className="speaker-card">
+    <div className="flex items-start gap-4 py-3">
       <div className="speaker-avatar-square">
         <User className="w-6 h-6" />
       </div>
