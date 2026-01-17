@@ -76,19 +76,17 @@ const SessionCard = ({
                 <h4 className="text-base font-bold text-primary mb-4 small-caps tracking-wide">
                   Modérateur
                 </h4>
-                <div className="flex justify-center">
-                  <div className="border border-[#b8d4e8] rounded-lg p-4 flex items-start gap-4 bg-[#f5f9fc] w-full max-w-xl">
-                    <div className="flex-shrink-0 w-14 h-14 border border-[#b8d4e8] rounded flex items-center justify-center bg-white">
-                      <User className="w-7 h-7 text-primary/50" />
-                    </div>
-                    <div className="flex-1 min-w-0 pt-1">
-                      <p className="font-bold text-primary text-sm leading-tight mb-2 small-caps tracking-wide">
-                        {moderator.name}
-                      </p>
-                      {moderator.role && (
-                        <p className="text-sm text-muted-foreground leading-relaxed">{moderator.role}</p>
-                      )}
-                    </div>
+                <div className="border border-[#b8d4e8] rounded-lg p-4 flex items-start gap-4 bg-[#f5f9fc] w-full">
+                  <div className="flex-shrink-0 w-14 h-14 border border-[#b8d4e8] rounded flex items-center justify-center bg-white">
+                    <User className="w-7 h-7 text-primary/50" />
+                  </div>
+                  <div className="flex-1 min-w-0 pt-1">
+                    <p className="font-bold text-primary text-sm leading-tight mb-2 small-caps tracking-wide">
+                      {moderator.name}
+                    </p>
+                    {moderator.role && (
+                      <p className="text-sm text-muted-foreground leading-relaxed">{moderator.role}</p>
+                    )}
                   </div>
                 </div>
               </div>
