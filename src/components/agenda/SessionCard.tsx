@@ -48,7 +48,7 @@ const SessionCard = ({
       <div className="timeline-line" />
       <TimeBadge time={time} />
       <div className="flex-1 session-card">
-        <h3 className="text-xl font-bold text-[#0a3d62] tracking-wide mb-4 small-caps">
+        <h3 className="text-xl font-bold text-[hsl(206,91%,25%)] tracking-wide mb-4 small-caps">
           {title}
         </h3>
 
