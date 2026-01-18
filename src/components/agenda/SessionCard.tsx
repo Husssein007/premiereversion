@@ -90,19 +90,26 @@ const SessionCard = ({
                 </h4>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2">
                   {/* Keynotes en premier, puis les autres */}
-                  {[...speakers.filter(s => s.isKeynote), ...speakers.filter(s => !s.isKeynote)].map((speaker, index, arr) => (
-                    <div 
-                      key={index}
-                      className={arr.length % 2 !== 0 && index === arr.length - 1 ? "md:col-span-2 md:flex md:justify-center" : ""}
-                    >
-                      <div className={arr.length % 2 !== 0 && index === arr.length - 1 ? "md:w-1/2" : "w-full"}>
-                        <SpeakerCard
-                          name={speaker.name}
-                          role={speaker.role}
-                        />
+                  {[...speakers.filter(s => s.isKeynote), ...speakers.filter(s => !s.isKeynote)].map((speaker, index, arr) => {
+                    // Si un seul panéliste, aligner à gauche
+                    const isSingleSpeaker = arr.length === 1;
+                    // Si nombre impair et dernier élément (sauf si un seul)
+                    const isLastOdd = arr.length % 2 !== 0 && index === arr.length - 1 && !isSingleSpeaker;
+                    
+                    return (
+                      <div 
+                        key={index}
+                        className={isLastOdd ? "md:col-span-2 md:flex md:justify-center" : ""}
+                      >
+                        <div className={isLastOdd ? "md:w-1/2" : "w-full"}>
+                          <SpeakerCard
+                            name={speaker.name}
+                            role={speaker.role}
+                          />
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               </div>
             )}
