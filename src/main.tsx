@@ -2,6 +2,11 @@ import { createRoot } from "react-dom/client";
 import App from "./App.tsx";
 import "./index.css";
 
+// Detect if running inside iframe and add class to html
+if (window.self !== window.top) {
+  document.documentElement.classList.add("embedded");
+}
+
 // Iframe height communication
 function sendHeightToParent() {
   const height = document.documentElement.scrollHeight;

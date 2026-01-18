@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Fix infinite height growth when embedded in iframe */
+html.embedded .min-h-screen {
+  min-height: auto !important;
+}
+
+html.embedded .h-screen {
+  height: auto !important;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
