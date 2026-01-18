@@ -63,7 +63,7 @@ const SessionCard = ({
             {/* Modérateur en premier */}
             {moderator && (
               <div>
-                <h4 className="text-base font-bold text-primary mb-4 small-caps tracking-wide">
+                <h4 className="text-base font-bold text-[hsl(168,76%,36%)] mb-4 small-caps tracking-wide">
                   Modérateur
                 </h4>
                 <div className="border border-[#b8d4e8] rounded-lg p-5 flex items-start gap-5 bg-[#f8fbfd]">
@@ -85,7 +85,7 @@ const SessionCard = ({
             {/* Panélistes */}
             {speakers && speakers.length > 0 && (
               <div>
-                <h4 className="text-base font-bold text-primary mb-5 small-caps tracking-wide">
+                <h4 className="text-base font-bold text-[hsl(331,52%,53%)] mb-5 small-caps tracking-wide underline">
                   Panélistes
                 </h4>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2">
