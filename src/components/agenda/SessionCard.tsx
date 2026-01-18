@@ -66,8 +66,8 @@ const SessionCard = ({
                 <h4 className="text-base font-bold text-[hsl(168,76%,36%)] mb-4 small-caps tracking-wide">
                   Modérateur
                 </h4>
-                <div className="border-2 border-[hsl(168,76%,36%)] rounded-lg p-5 flex items-start gap-5 bg-[hsl(168,76%,96%)]">
-                  <div className="flex-shrink-0 w-14 h-14 border border-[hsl(168,76%,36%)] rounded-md flex items-center justify-center bg-white">
+                <div className="border-2 border-[hsl(168,76%,36%)] rounded-lg p-5 flex items-start gap-5 bg-[hsl(168,76%,96%)] transition-all duration-300 hover:shadow-lg hover:shadow-[hsl(168,76%,36%)]/20 hover:scale-[1.02] hover:bg-[hsl(168,76%,92%)] cursor-pointer">
+                  <div className="flex-shrink-0 w-14 h-14 border border-[hsl(168,76%,36%)] rounded-md flex items-center justify-center bg-white transition-transform duration-300 group-hover:rotate-3">
                     <User className="w-7 h-7 text-[hsl(168,76%,36%)]" />
                   </div>
                   <div className="flex-1 min-w-0 pt-1">
