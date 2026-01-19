@@ -13,11 +13,15 @@ const HeroBanner = () => {
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 drop-shadow-lg small-caps">
           Agenda
         </h1>
-        <p className="text-xl md:text-2xl text-white/90 mb-2 drop-shadow-md">
-          Agenda Prévisionnel – Février 2026
+        <p className="text-xl md:text-3xl font-bold text-white/90 mb-2 drop-shadow-md">
+          SALMA Dialogue Business forum 
+        </p>
+        
+                <p className="text-xl md:text-2xl  text-white/90 mb-2 drop-shadow-md">
+          For South-South & Triangulaire coopération 
         </p>
         <p className="text-lg md:text-xl text-white/80 drop-shadow-md">
-          Salma Dialogue Business Forum – Dakar, Sénégal
+         Sénégal 2026
         </p>
       </div>
     </div>
