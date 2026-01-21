@@ -50,7 +50,7 @@ const SessionCard = ({
       <div className="timeline-line" />
       <TimeBadge time={time} />
       <div className="flex-1 session-card transition-all duration-300 hover:shadow-md hover:border-primary/40 hover:translate-x-1">
-        <h3 className="text-xl font-bold text-[hsl(206,91%,25%)] tracking-wide mb-4 small-caps">
+        <h3 className="text-lg font-bold text-[hsl(206,91%,25%)] tracking-wide mb-4">
           {title}
         </h3>
 
