@@ -62,28 +62,6 @@ const SessionCard = ({
 
         {(speakers && speakers.length > 0) || moderator || keynote ? (
           <div className="mt-8 space-y-8">
-            {/* Modérateur en premier */}
-            {moderator && (
-              <div>
-                <h4 className="text-base font-bold text-[hsl(168,76%,36%)] mb-4 small-caps tracking-wide">
-                  Modérateur
-                </h4>
-                <div className="border-2 border-[hsl(168,76%,36%)] rounded-lg p-5 flex items-start gap-5 bg-[hsl(168,76%,96%)] transition-all duration-300 hover:shadow-lg hover:shadow-[hsl(168,76%,36%)]/20 hover:scale-[1.02] hover:bg-[hsl(168,76%,92%)] cursor-pointer">
-                  <div className="flex-shrink-0 w-14 h-14 border border-[hsl(168,76%,36%)] rounded-md flex items-center justify-center bg-white transition-transform duration-300 group-hover:rotate-3">
-                    <User className="w-7 h-7 text-[hsl(168,76%,36%)]" />
-                  </div>
-                  <div className="flex-1 min-w-0 pt-1">
-                    <p className="font-bold text-primary text-[15px] leading-snug mb-2 small-caps tracking-wide">
-                      {moderator.name}
-                    </p>
-                    {moderator.role && (
-                      <p className="text-[13px] text-muted-foreground leading-relaxed">{moderator.role}</p>
-                    )}
-                  </div>
-                </div>
-              </div>
-            )}
-
             {/* Keynote speaker - même style que les speakers */}
             {keynote && (
               <div className="flex items-start gap-4 py-3">
@@ -129,6 +107,28 @@ const SessionCard = ({
                       </div>
                     );
                   })}
+                </div>
+              </div>
+            )}
+
+            {/* Modérateur en bas avec nouvelle couleur */}
+            {moderator && (
+              <div>
+                <h4 className="text-base font-bold text-[hsl(25,80%,50%)] mb-4 tracking-wide">
+                  Modérateur
+                </h4>
+                <div className="flex items-start gap-4 py-3">
+                  <div className="flex-shrink-0 w-12 h-12 border border-[hsl(25,80%,70%)] rounded-md flex items-center justify-center bg-[hsl(25,80%,97%)]">
+                    <User className="w-6 h-6 text-[hsl(25,80%,50%)]" />
+                  </div>
+                  <div className="flex-1 min-w-0 pt-0.5">
+                    <p className="font-bold text-[hsl(206,91%,25%)] text-[15px] leading-snug mb-1.5 tracking-wide">
+                      {moderator.name}
+                    </p>
+                    {moderator.role && (
+                      <p className="text-[13px] text-muted-foreground leading-relaxed">{moderator.role}</p>
+                    )}
+                  </div>
                 </div>
               </div>
             )}
