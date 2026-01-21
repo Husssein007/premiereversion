@@ -84,14 +84,14 @@ const SessionCard = ({
               </div>
             )}
 
-            {/* Keynote speaker - même style sans cadre */}
+            {/* Keynote speaker - même style que les speakers */}
             {keynote && (
-              <div className="flex items-start gap-5 py-2 transition-all duration-300 hover:translate-x-1">
-                <div className="flex-shrink-0 w-14 h-14 border border-[hsl(206,91%,35%)] rounded-md flex items-center justify-center bg-[hsl(206,91%,97%)] transition-transform duration-300 hover:rotate-3">
-                  <User className="w-7 h-7 text-[hsl(206,91%,35%)]" />
+              <div className="flex items-start gap-4 py-3">
+                <div className="flex-shrink-0 w-12 h-12 border border-[#b8d4e8] rounded-md flex items-center justify-center bg-white">
+                  <User className="w-6 h-6 text-primary/50" />
                 </div>
-                <div className="flex-1 min-w-0 pt-1">
-                  <p className="font-bold text-[hsl(206,91%,25%)] text-[15px] leading-snug mb-2 small-caps tracking-wide">
+                <div className="flex-1 min-w-0 pt-0.5">
+                  <p className="font-bold text-[hsl(206,91%,25%)] text-[15px] leading-snug mb-1.5 small-caps tracking-wide">
                     {keynote.name}
                   </p>
                   <p className="text-[13px] text-muted-foreground leading-relaxed">{keynote.role}</p>
