@@ -7,6 +7,7 @@ const Day1Agenda = () => {
         time="09:00"
         title="Discours d'ouverture"
         hideSpeakersLabel
+        keynote={{ name: "Fatma Thabet Chiboub", role: "Ministre de l'Industrie, de l'Énergie et des Mines de Tunisie (Tbc)" }}
         speakers={[
           { name: "Amina Magouri", role: "Présidente de Salma Dialogue" },
           { name: "Adama Lam", role: "Président de la CNES" },
@@ -14,7 +15,6 @@ const Day1Agenda = () => {
           { name: "Jonathan Nowak", role: "Représentant Résident de la KAS Sénégal" },
           { name: "Représentant de l'Ambassade d'Allemagne au Sénégal", role: "" },
           { name: "Rachid Saidani", role: "Ambassadeur de Tunisie au Sénégal" },
-          { name: "Fatma Thabet Chiboub", role: "Ministre de l'Industrie, de l'Énergie et des Mines de Tunisie (Tbc)" },
         ]}
       />
 

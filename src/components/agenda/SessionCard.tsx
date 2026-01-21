@@ -60,7 +60,7 @@ const SessionCard = ({
           </p>
         )}
 
-        {(speakers && speakers.length > 0) || moderator ? (
+        {(speakers && speakers.length > 0) || moderator || keynote ? (
           <div className="mt-8 space-y-8">
             {/* Modérateur en premier */}
             {moderator && (
@@ -79,6 +79,23 @@ const SessionCard = ({
                     {moderator.role && (
                       <p className="text-[13px] text-muted-foreground leading-relaxed">{moderator.role}</p>
                     )}
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Keynote speaker - encadré spécial */}
+            {keynote && (
+              <div>
+                <div className="border-2 border-[hsl(206,91%,35%)] rounded-lg p-5 flex items-start gap-5 bg-[hsl(206,91%,97%)] transition-all duration-300 hover:shadow-lg hover:shadow-[hsl(206,91%,35%)]/20 hover:scale-[1.02] hover:bg-[hsl(206,91%,94%)] cursor-pointer">
+                  <div className="flex-shrink-0 w-14 h-14 border border-[hsl(206,91%,35%)] rounded-md flex items-center justify-center bg-white transition-transform duration-300 group-hover:rotate-3">
+                    <User className="w-7 h-7 text-[hsl(206,91%,35%)]" />
+                  </div>
+                  <div className="flex-1 min-w-0 pt-1">
+                    <p className="font-bold text-[hsl(206,91%,25%)] text-[15px] leading-snug mb-2 small-caps tracking-wide">
+                      {keynote.name}
+                    </p>
+                    <p className="text-[13px] text-muted-foreground leading-relaxed">{keynote.role}</p>
                   </div>
                 </div>
               </div>
