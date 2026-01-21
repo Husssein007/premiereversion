@@ -7,7 +7,6 @@ const Day1Agenda = () => {
         time="09:00"
         title="Discours d'ouverture"
         hideSpeakersLabel
-        keynote={{ name: "Fatma Thabet Chiboub", role: "Ministre de l'Industrie, de l'Énergie et des Mines de Tunisie (Tbc)" }}
         speakers={[
           { name: "Amina Magouri", role: "Présidente de Salma Dialogue" },
           { name: "Adama Lam", role: "Président de la CNES" },
@@ -21,9 +20,11 @@ const Day1Agenda = () => {
       <SessionCard
         time="09:35"
         title="Ouverture officielle & Présentation de la politique industrielle et commerciale du Sénégal"
+        keynote={{ name: "Fatma Thabet Chiboub", role: "Ministre de l'Industrie, de l'Énergie et des Mines de Tunisie (Tbc)" }}
         speakers={[
           { name: "Dr. Serigne Gueye Diop", role: "Ministre de l'Industrie et du Commerce du Sénégal" },
         ]}
+        hideSpeakersLabel
       />
 
       <SessionCard
