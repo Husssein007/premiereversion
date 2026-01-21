@@ -17,6 +17,7 @@ interface SessionCardProps {
   moderator?: { name: string; role?: string };
   keynote?: { name: string; role: string };
   isBreak?: boolean;
+  hideSpeakersLabel?: boolean;
 }
 
 const SessionCard = ({
@@ -28,6 +29,7 @@ const SessionCard = ({
   moderator,
   keynote,
   isBreak = false,
+  hideSpeakersLabel = false,
 }: SessionCardProps) => {
   if (isBreak) {
     return (
@@ -85,9 +87,11 @@ const SessionCard = ({
             {/* Panélistes */}
             {speakers && speakers.length > 0 && (
               <div>
-                <h4 className="text-base font-bold text-[hsl(331,52%,53%)] mb-5 small-caps tracking-wide underline">
-                  Panélistes
-                </h4>
+                {!hideSpeakersLabel && (
+                  <h4 className="text-base font-bold text-[hsl(331,52%,53%)] mb-5 small-caps tracking-wide underline">
+                    Panélistes
+                  </h4>
+                )}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2">
                   {/* Keynotes en premier, puis les autres */}
                   {[...speakers.filter(s => s.isKeynote), ...speakers.filter(s => !s.isKeynote)].map((speaker, index, arr) => {
