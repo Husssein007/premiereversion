@@ -7,21 +7,28 @@ interface DateTabsProps {
 
 const DateTabs = ({ activeDate, onDateChange }: DateTabsProps) => {
   return (
-    <div className="flex flex-col sm:flex-row gap-3 w-full max-w-2xl mx-auto">
+    <div className="flex flex-col sm:flex-row gap-2 w-full max-w-xl mx-auto">
       <button
         onClick={() => onDateChange("day1")}
         className={cn(
-          "flex-1 py-4 px-6 text-sm md:text-base font-semibold rounded-xl transition-all duration-200",
-          activeDate === "day1" ? "tab-active shadow-md" : "tab-inactive"
+          "flex-1 py-2.5 px-5 text-xs md:text-sm font-medium rounded-full transition-all duration-300 ease-out",
+          "hover:-translate-y-0.5 hover:shadow-sm",
+          activeDate === "day1"
+            ? "bg-[hsl(206,91%,25%)] text-white shadow-sm"
+            : "bg-[hsl(206,91%,97%)] text-[hsl(206,91%,25%)] border border-[hsl(206,91%,85%)]"
         )}
       >
         Mardi 3 Février 2026
       </button>
+
       <button
         onClick={() => onDateChange("day2")}
         className={cn(
-          "flex-1 py-4 px-6 text-sm md:text-base font-semibold rounded-xl transition-all duration-200",
-          activeDate === "day2" ? "tab-active shadow-md" : "tab-inactive"
+          "flex-1 py-2.5 px-5 text-xs md:text-sm font-medium rounded-full transition-all duration-300 ease-out",
+          "hover:-translate-y-0.5 hover:shadow-sm",
+          activeDate === "day2"
+            ? "bg-[hsl(206,91%,25%)] text-white shadow-sm"
+            : "bg-[hsl(206,91%,97%)] text-[hsl(206,91%,25%)] border border-[hsl(206,91%,85%)]"
         )}
       >
         Mercredi 4 Février 2026
