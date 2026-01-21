@@ -6,6 +6,7 @@ const Day1Agenda = () => {
       <SessionCard
         time="09:00"
         title="Discours d'ouverture"
+        hideSpeakersLabel
         speakers={[
           { name: "Amina Magouri", role: "Présidente de Salma Dialogue" },
           { name: "Adama Lam", role: "Président de la CNES" },
