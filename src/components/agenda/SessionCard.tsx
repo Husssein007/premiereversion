@@ -37,19 +37,31 @@ const SessionCard = ({
   isBreak = false,
   hideSpeakersLabel = false
 }: SessionCardProps) => {
-  if (isBreak) {
-    return (
-      <div className="flex items-start gap-4 relative">
-        <div className="timeline-line" />
-        <TimeBadge time={time} />
-        <div className="flex-1 py-2">
-          <h3 className="text-lg font-medium text-muted-foreground italic">
-            {title}
-          </h3>
-        </div>
+if (isBreak) {
+  return (
+    <div className="flex items-start gap-6 relative group">
+      <div className="timeline-line" />
+      <TimeBadge time={time} />
+
+      {/* ✅ put it inside a card like other sessions */}
+      <div className="flex-1 session-card transition-all duration-300 hover:shadow-md hover:border-primary/40 hover:translate-x-1">
+<h3
+  className="
+    text-lg
+    font-semibold
+    italic
+    tracking-wide
+    text-[#6B6F73]
+  "
+>
+  {title}
+</h3>
+
       </div>
-    );
-  }
+    </div>
+  );
+}
+
 
   return (
     <div className="flex items-start gap-6 relative group">
