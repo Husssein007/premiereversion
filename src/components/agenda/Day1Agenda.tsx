@@ -97,19 +97,20 @@ qualifiés entre l’Allemagne et l’Afrique . "
 
       <SessionCard
         time="15:30"
-        title="Session 2 : Innovation en Agribusiness et Biotech"
-        description="Cette session explorera les leviers de modernisation du secteur agricole et agro-industriel."
+        title="Session 2 : Innovation en agribusiness et biotech : consolider la production locale pour la captation de la valeur ajoutée"
+        description="Cette session portera sur l’approfondissement de la coopération institutionnelle et économique entre les pays du Sud en lien avec les enjeux d’industrialisation, de résilience macroéconomique et de développement de l’emploi durable."
         speakers={[
-          { name: "Aïssatou Ndiaye", role: "Coordinatrice Générale PNDAS", isKeynote: true },
-          { name: "Kassim El Sahili", role: "Fondateur – IBS" },
-          { name: "Tidjane Dème", role: "General Partner – Partech Africa" },
-          { name: "Cosmas Mwikirize", role: "Secrétariat Technologie & Innovation – Ouganda" },
-          { name: "Olfa Kelani", role: "PDG Kyto-Prod" },
-          { name: "Yosra Tahri", role: "PDG PHYTOPRO" },
+          { name: "Aïssatou Ndiaye", role: "Coordinatrice Générale du Programme National de Développement des Agropoles du Sénégal, (PNDAS)", isKeynote: true },
+          { name: "Moctar Ndiaye", role: "Directeur de l'Agriculture au Ministère de l'Agriculture, de la Souveraineté alimentaire et de l'Elevage du Senegal" },
+          { name: "Kassim El Sahili", role: "Fondateur et Président du Conseil d’Administration de la Société IBS" },
+          { name: "Tidjane Dème", role: "General Partner du fonds d’investissement Partech Africa" },
+          { name: "Cosmas Mwikirize", role: "Directeur du Secrétariat Technologie et Innovation de l’Ouganda" },
+          { name: "Yosra Tahri", role: "PDG de la société PHYTOPRO" },
         ]}
         moderator={{
+
           name: "Youssef Trifa",
-          role: "Professeur – INAT Tunisie",
+          role: "Professeur à l’Institut National Agronomique de Tunisie",
         }}
       />
 

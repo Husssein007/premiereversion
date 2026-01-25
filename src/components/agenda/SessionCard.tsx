@@ -111,23 +111,27 @@ if (isBreak) {
                   {[...speakers.filter(s => s.isKeynote), ...speakers.filter(s => !s.isKeynote)].map(
                     (speaker, index, arr) => {
                       // Si un seul panéliste, aligner à gauche
-                      const isSingleSpeaker = arr.length === 1;
-                      // Si nombre impair et dernier élément (sauf si un seul)
-                      const isLastOdd =
-                        arr.length % 2 !== 0 &&
-                        index === arr.length - 1 &&
-                        !isSingleSpeaker;
+// ✅ If only one speaker -> center
+const isSingleSpeaker = arr.length === 1;
 
-                      return (
-                        <div
-                          key={index}
-                          className={isLastOdd ? "md:col-span-2 md:flex md:justify-center" : ""}
-                        >
-                          <div className={isLastOdd ? "md:w-1/2" : "w-full"}>
-                            <SpeakerCard name={speaker.name} role={speaker.role} />
-                          </div>
-                        </div>
-                      );
+// ✅ If odd count -> last item centered (including the single case)
+const isLastOdd =
+  arr.length % 2 !== 0 &&
+  index === arr.length - 1;
+
+const shouldCenter = isSingleSpeaker || isLastOdd;
+
+return (
+  <div
+    key={index}
+    className={shouldCenter ? "md:col-span-2 md:flex md:justify-center" : ""}
+  >
+    <div className={shouldCenter ? "w-full md:w-1/2" : "w-full"}>
+      <SpeakerCard name={speaker.name} role={speaker.role} />
+    </div>
+  </div>
+);
+
                     }
                   )}
                 </div>
