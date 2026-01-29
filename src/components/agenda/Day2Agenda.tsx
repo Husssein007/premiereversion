@@ -5,24 +5,17 @@ const Day2Agenda = () => {
     <div className="space-y-6">
             <SessionCard time="09:00" title="Accueil & Enregistrement" isBreak />
 
-      <SessionCard
-        time="09:20"
-        title="Ouverture officielle de la deuxième journée"
-        speakers={[
-          { name: "Abdourahmane Sarr", role: "Ministre de l'Économie, du Plan et de la Coopération du Sénégal (Tbc)" },
-        ]}
-      />
+
 
       <SessionCard
-        time="09:45"
-        title="Session 1 : Fragmentation géoéconomique et risques géopolitiques : La Coopération Sud-Sud au service d'investissements durables et d'échanges résilients"
-        description="Ce panel analysera les stratégies régionales permettant de dynamiser l’investissement et les échanges commerciaux dans un contexte marqué par la montée des guerres commerciales, la fragmentation géoéconomique et l’intensification des incertitudes géopolitiques. Il permettra de dégager des orientations concrètes pour repositionner les économies régionales dans un environnement international en recomposition rapide. Les discussions seront focalisées sur le rôle des alliances régionales comme instruments de résilience économique, de sécurisation des chaînes de valeur et demobilisation de l’investissement productif."
+        time="09:20"
+        title="Session 1 : FRAGMENTATION GEOECONOMIQUE : LA COOPERATION SUD-SUD & TRIANGULAIRE AU SERVICE D’INVESTISSEMENTS DURABLES ET D’ECHANGES RESILIENTS"
+        description="Ce panel analysera les stratégies régionales permettant de dynamiser l’investissement et les échanges commerciaux dans un contexte marqué par la montée des guerres commerciales, la fragmentation géoéconomique et l’intensification des incertitudes géopolitiques. Il permettra de dégager des orientations concrètes pour repositionner les économies régionales dans un environnement international en recomposition rapide. Les discussions seront focalisées sur le rôle des alliances régionales comme instruments de résilience économique, de sécurisation des chaînes de valeur et de mobilisation de l’investissement productif."
         speakers={[
-          { name: "Moncef Soudani", role: "Représentant de la division reverse linkage de la Banque islamique de développement, (Tbc)", isKeynote: true },
           { name: "Jouldée Soumare", role: "Directrice du Développement du Secteur Privé, Ministère de l'Economie, du Plan et de la Coopération du Sénégal" },
           { name: "Anja Berretta", role: "Directrice du Programme Régional KAS Economy Africa" },
           { name: "Mohamed Dakhli", role: "Expert-Comptable et Fondateur des Programmes Tunisia's Economy Rebound et Africa's Economy Rebound" },
-          { name: "Sami Gargouri", role: "Directeur Général de la Banque Sahélo-Saharienne pour l'Investissement et le Commerce, BSIC Sénégal" },
+          { name: "Adja Khanata Diagne", role: "économiste régionale, Banque Islamique de Développement, IsDB" },
           { name: "Mourad Ben Hassine", role: "Président Directeur Général du Centre de Promotion des Exportations tunisienne, CEPEX" },
           { name: "Emilia von Mettenheim", role: "Représentante régionale du Centre de compétences allemand ECA pour le financement des exportations allemandes en Afrique de l'Ouest et Afrique subsaharienn" },
 
@@ -63,7 +56,7 @@ const Day2Agenda = () => {
         speakers={[
           { name: "Felix Sarrazin", role: "GIZ, Synergies concrètes de la coopération triangulaire : l'exemple du soutien au secteur Automobile" },
           { name: "Jalel Tebib", role: "Directeur Général de la Foreign Investment Promotion Agency, FIPA-Tunisia" },
-          { name: "José Maria Arbilla", role: "Ambassadeur d'Argentine en Tunisie" },
+          { name: "Pamela Mbabazi", role: "Présidente exécutive de l'Autorité nationale de planification de l’Ouganda" },
           { name: "Aminou Akadiri", role: "PDG/Directeur exécutif, Fédération des chambres de commerce et d'industrie d'Afrique de l'Ouest (FEWACCI)" },
           { name: "Mhamed Ben Abid", role: "Directeur Général du Suivi et de l'évaluation des réformes du Climat des Affaires, Ministère de l'Économie et de la Planification de Tunisie" },
         ]}
@@ -77,7 +70,7 @@ const Day2Agenda = () => {
         speakers={[
           { name: "Amina Magouri", role: "Présidente de SALMA Dialogue" },
           { name: "Adama Lam", role: "Président de la CNES" },
-          { name: "Général Birame Diop", role: "Ministre des Forces armées du Sénégal – Clôture officielle et perspectives stratégiques de mise en œuvre" },
+          { name: "Général Birame Diop", role: "Ministre des Forces armées du Sénégal ", },
         ]}
       />
     </div>

@@ -23,7 +23,7 @@ const Day1Agenda = () => {
 
 
 
-          { name: "Fatma Thabet Chiboub", role: "Ministre de l'Industrie, de l'Énergie et des Mines de Tunisie (Tbc)" },
+          { name: "Wael Chouchane", role: "Secrétaire d’État auprès de la Ministre Tunisienne de l’Industrie, des Mines et de l’Énergie, chargé de la Transition énergétique" },
 
           // ✅ Fatma moved here (END) and will be centered in UI
           {
@@ -51,17 +51,17 @@ const Day1Agenda = () => {
       <SessionCard
         time="10:15"
         title="Session inaugurale : Cadres politiques incitants et coopération Sud-Sud & Triangulaire : Moteurs de la transformation économique en Afrique"
-        description="Cette session de haut niveau mettra en lumière la coopération institutionnelle et économique entre les régions du Sud, mettant l'accent sur l'industrialisation, la résilience économique et la création d'emplois durables."
+        description="Cette session portera sur l’approfondissement de la coopération institutionnelle et économique entre les pays du Sud en lien avec les enjeux d’industrialisation, de résilience macroéconomique et de développement de l’emploi durable."
         speakers={[
           {
-            name: "Fatma Thabet Chiboub",
-            role: "Ministre de l'Industrie, des Mines et de l'Energie de Tunisie",
+            name: "Wael Chouchane",
+            role: "Secrétaire d’État auprès de la Ministre Tunisienne de l’Industrie, des Mines et de l’Énergie, chargé de la Transition énergétique",
             isKeynote: true,
           },
-          { name: "Bakary Séga Bathily", role: "Directeur Général de l'Agenence pour la Promotion de l'investissement et des Grands Traveaux du Sénégal" },
+          { name: "Bakary Séga Bathily", role: "Directeur Général de l’Agence pour la Promotion de l'Investissement et des Grands Travaux du Sénégal, APIX" },
           {
-            name: "Pamela Mbabazi",
-            role: "Présidente exécutive de l'Autorité nationale de planification de l'Ouganda",
+            name: "José Maria Arbilla",
+            role: "Ambassadeur d’Argentine en Tunisie, ancien Directeur National des Négociations Économiques Internationales du Ministère des Affaires Etrangères, du Commerce International et du Culte d’Argentine",
           },
           { name: "Alexander Knipperts", role: "Fédération des Industries Allemandes, BDI" },
         ]}
@@ -82,7 +82,6 @@ qualifiés entre l’Allemagne et l’Afrique . "
         speakers={[
           { name: "Sabri Brahem", role: "Membre du CoDir de la Tunisian Automotive Association (TAA)", isKeynote: true },
           { name: "Akrem Saadaoui", role: "Directeur du Bureau pour l’Afrique du Nord, AAAM" },
-          { name: "Marius Ochel", role: "Directeur des partenariats avec les associations internationales pour l'Afrique et l'Inde,VdA" },
           { name: "Allan Muhumuza", role: "Chef du Bureau de la mobilité au Secrétariat à la technologie et à l'innovation de l'Ouganda" },
           { name: "Martin Birkner", role: "Chef de la division NSO Business Strategy, Région Afrique Subsaharienne, Volkswagen Afrique" },
           { name: "Babacar Gueye", role: "Directeur Général de EMG Universal Auto" },
@@ -98,7 +97,7 @@ qualifiés entre l’Allemagne et l’Afrique . "
       <SessionCard
         time="15:30"
         title="Session 2 : Innovation en agribusiness et biotech : consolider la production locale pour la captation de la valeur ajoutée"
-        description="Cette session portera sur l’approfondissement de la coopération institutionnelle et économique entre les pays du Sud en lien avec les enjeux d’industrialisation, de résilience macroéconomique et de développement de l’emploi durable."
+        description="Cette session explorera les leviers de modernisation du secteur agricole et agro-industriel pour stimuler la productivité, créer de la richesse, renforcer la résilience climatique et accroître la valeur ajoutée des produits locaux."
         speakers={[
           { name: "Aïssatou Ndiaye", role: "Coordinatrice Générale du Programme National de Développement des Agropoles du Sénégal, (PNDAS)", isKeynote: true },
           { name: "Moctar Ndiaye", role: "Directeur de l'Agriculture au Ministère de l'Agriculture, de la Souveraineté alimentaire et de l'Elevage du Senegal" },
