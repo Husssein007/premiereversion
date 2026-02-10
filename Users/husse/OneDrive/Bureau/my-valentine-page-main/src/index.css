@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 340 80% 98%;
+    --foreground: 340 25% 22%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 340 25% 22%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 340 25% 22%;
+
+    --primary: 340 75% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 340 50% 94%;
+    --secondary-foreground: 340 75% 45%;
+
+    --muted: 340 30% 95%;
+    --muted-foreground: 340 18% 45%;
+
+    --accent: 340 55% 90%;
+    --accent-foreground: 340 75% 42%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 340 40% 92%;
+    --input: 340 40% 92%;
+    --ring: 340 75% 55%;
+
+    --radius: 1.25rem;
+
+    --valentine-pink: 340 75% 55%;
+    --valentine-pink-light: 340 80% 96%;
+    --valentine-rose: 350 70% 62%;
+    --valentine-blush: 340 50% 94%;
+    --valentine-cream: 340 60% 98%;
+    --valentine-rose-gold: 15 50% 70%;
+    --valentine-deep-rose: 345 65% 48%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 340 30% 8%;
+    --foreground: 340 20% 90%;
+    --card: 340 25% 12%;
+    --card-foreground: 340 20% 90%;
+    --popover: 340 25% 12%;
+    --popover-foreground: 340 20% 90%;
+    --primary: 340 85% 58%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 340 30% 18%;
+    --secondary-foreground: 340 60% 80%;
+    --muted: 340 20% 16%;
+    --muted-foreground: 340 15% 60%;
+    --accent: 340 30% 20%;
+    --accent-foreground: 340 60% 80%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 340 20% 20%;
+    --input: 340 20% 20%;
+    --ring: 340 85% 58%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Nunito', sans-serif;
+  }
+
+  .font-romantic {
+    font-family: 'Playfair Display', serif;
+  }
+
+  h1, h2, .heading-romantic {
+    font-family: 'Playfair Display', serif;
+    letter-spacing: -0.01em;
+  }
+
+  .text-premium {
+    letter-spacing: 0.02em;
+  }
+
+  .text-elegant {
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 700;
+  }
+}
+
+@layer components {
+  .valentine-card {
+    @apply bg-card/85 rounded-3xl p-8 md:p-10;
+    border: 1px solid hsl(var(--valentine-pink-light));
+    backdrop-filter: blur(16px);
+    box-shadow: 
+      0 8px 32px hsl(var(--valentine-pink) / 0.1),
+      0 2px 8px hsl(var(--valentine-pink) / 0.06),
+      inset 0 1px 0 hsl(0 0% 100% / 0.6);
+  }
+
+  .btn-valentine-yes {
+    @apply bg-primary text-primary-foreground font-bold text-lg px-10 py-3 rounded-full
+      transition-all duration-300;
+    box-shadow: 
+      0 4px 20px hsl(var(--valentine-pink) / 0.35),
+      0 0 0 0 hsl(var(--valentine-pink) / 0);
+    animation: yes-button-glow 2.5s ease-in-out infinite;
+  }
+
+  .btn-valentine-yes:hover {
+    transform: scale(1.05);
+    box-shadow: 
+      0 8px 30px hsl(var(--valentine-pink) / 0.45),
+      0 0 20px hsl(var(--valentine-pink) / 0.3);
+  }
+
+  .btn-valentine-no {
+    @apply bg-card/90 text-primary/80 font-semibold text-base px-8 py-2.5 rounded-full
+      border border-primary/30 transition-all duration-200;
+  }
+
+  .btn-valentine-no:hover {
+    @apply border-primary/50;
+  }
+}
+
+@layer utilities {
+  .shadow-valentine {
+    box-shadow: 
+      0 8px 32px hsl(var(--valentine-pink) / 0.1),
+      0 2px 8px hsl(var(--valentine-pink) / 0.06);
+  }
+
+  .shadow-valentine-lg {
+    box-shadow: 
+      0 12px 40px hsl(var(--valentine-pink) / 0.15),
+      0 4px 12px hsl(var(--valentine-pink) / 0.08);
+  }
+
+  .gradient-valentine {
+    background: linear-gradient(
+      145deg,
+      hsl(var(--valentine-cream)) 0%,
+      hsl(var(--valentine-pink-light)) 40%,
+      hsl(var(--valentine-blush)) 70%,
+      hsl(var(--valentine-cream)) 100%
+    );
+  }
+
+  .glass-effect {
+    backdrop-filter: blur(16px);
+    background: hsl(0 0% 100% / 0.85);
+    border: 1px solid hsl(0 0% 100% / 0.5);
+  }
+}
+
+@keyframes float-heart {
+  0% {
+    transform: translateY(100vh) rotate(0deg) scale(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.6;
+    transform: translateY(90vh) rotate(20deg) scale(1);
+  }
+  90% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(-10vh) rotate(120deg) scale(0.5);
+    opacity: 0;
+  }
+}
+
+@keyframes card-breathe {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes yes-button-glow {
+  0%, 100% { 
+    box-shadow: 
+      0 4px 20px hsl(var(--valentine-pink) / 0.35),
+      0 0 0 0 hsl(var(--valentine-pink) / 0);
+  }
+  50% { 
+    box-shadow: 
+      0 6px 28px hsl(var(--valentine-pink) / 0.45),
+      0 0 16px hsl(var(--valentine-pink) / 0.25);
+  }
+}
+
+@keyframes confetti-fall {
+  0% {
+    transform: translateY(-20px) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse-heart {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
